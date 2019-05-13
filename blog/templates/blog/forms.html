@@ -1,0 +1,26 @@
+{% block body %}
+<form method="post" action="{% url 'blog:handle_forms' %}">
+    {% csrf_token %}
+    
+    {{ form.age.label }}:
+    {{ form.age }}
+    <hr>
+
+    {{ form.gender_s.label }}
+    {{ form.gender_s }}
+    <hr>
+
+    {{ form.send_message.label}}:
+    {{ form.send_message }}
+    <hr>
+
+    {{ form.birthday.label }}:
+    {{ form.birthday }}
+    <hr> 
+
+    <button type="submit">Filter</button>
+</form>
+
+{% endblock %}
+
+
